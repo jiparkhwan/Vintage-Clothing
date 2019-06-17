@@ -1,0 +1,111 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+    background-image: url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-gray-solid-color-background.jpg);
+    background-size: 100% 100%;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #979797;
+  font-family: "Judson", serif;
+}
+.logo {
+  color: rgb(53, 52, 52);
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  font-size: 20px;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 27%;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: rgb(53, 52, 52);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.pizza {
+  display: none;
+  cursor: pointer;
+}
+.pizza div {
+  width: 25px;
+  height: 2.5px;
+  background-color: rgb(53, 52, 52);
+  margin: 5px;
+}
+/* making it compatible with mobile */
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* stops the scrolling */
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #a9a9a9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%); /* gonna put back to 0 */
+    transition: transform 0.6s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .pizza {
+    display: block;
+  }
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+ @keyframes navLinkFade{
+     from{
+         opacity:0;
+         transform: translateX(50px);
+
+     }
+     to{
+         opacity: 1;
+         transform: translateX(0px);
+     }
+ }
+.toggle .line1{
+   opacity: 0;
+}
+.toggle .line2{
+    transform:rotate(-45deg) translate(-5px,6px);
+    
+}
+.toggle .line3{
+   opacity: 0;
+    
+}
+.toggle .line4{
+    transform:rotate(45deg) translate(-5px,-6px);
+    
+}
+.toggle .line5{
+  opacity: 0;
+    
+}
